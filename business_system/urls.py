@@ -21,7 +21,11 @@ from django.http import HttpResponse
 def home(request):
     return HttpResponse('your site is live and working')
 
+def test(request):
+    return HttpResponse('your site is live and working')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('', test),
 ]
