@@ -1,11 +1,6 @@
 from django.urls import path
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("🔥 Accounts homepage working!")
+from .views import login_view
 
 urlpatterns = [
-    path('', home),
+    path('login/', login_view, name='login'),
 ]
-
-
